@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>MasakAsyik - Login</title>
+  <style>
+    body { font-family: 'Segoe UI'; background-color: #fff3e6; text-align: center; padding-top: 100px; }
+    form { background: #ffffff; padding: 30px; display: inline-block; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    input, button { display: block; margin: 10px auto; padding: 10px; width: 220px; border-radius: 6px; border: 1px solid #ccc; }
+    button { background-color: tomato; color: white; border: none; cursor: pointer; }
+    h2 { color: tomato; }
+  </style>
+</head>
+<body>
+  <h2>Login untuk Tambah Resep</h2>
+  <form onsubmit="return login()">
+    <input type="text" id="username" placeholder="Nama Pengguna" required>
+    <input type="password" id="password" placeholder="Kata Sandi" required>
+    <button type="submit">Masuk</button>
+  </form>
+
+  <script>
+    function login() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
+  
+      if (user === "tessa" && pass === "123") {
+        // Simpan status login
+        localStorage.setItem("isLogin", "true");
+  
+        // Arahkan ke halaman tambah resep
+        window.location.href = "tambah resep.html";
+        return false;
+      } else {
+        alert("Nama pengguna atau kata sandi salah!");
+        return false;
+      }
+    }
+  </script>  
+</body>
+</html>

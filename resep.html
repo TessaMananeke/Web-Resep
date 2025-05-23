@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>MasakAsyik - Daftar Resep</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #fffaf2;
+    }
+    header, footer {
+      background-color: tomato;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    nav {
+      text-align: center;
+      margin: 10px 0;
+    }
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: tomato;
+      font-weight: bold;
+    }
+    main {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .resep {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .resep img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .resep button {
+      margin-top: 10px;
+      background-color: tomato;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .resep .detail {
+      text-align: left;
+      margin-top: 15px;
+      display: none;
+    }
+    ul, ol {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Website Resep Makanan - MasakAsyik 🍳</h1>
+    <p>Resep Anti Gagal, Anti Galau! 😎🍲</p>
+  </header>
+
+  <nav>
+    <a href="resep.html">🏠 Home</a>
+    <a href="#" onclick="cekLogin()">➕ Tambah Resep</a>
+  </nav>
+
+  <main>
+
+    <!-- SPAGHETTI BOLOGNESE-->
+    <div class="resep">
+      <img src="https://asset.kompas.com/crops/d4z7ElIiyNJaVNvnt7ksmyF6_m0=/0x0:1000x667/1200x800/data/photo/2023/10/16/652c9a7b4c47e.jpg" alt="Spaghetti Bolognese">
+      <h3>🍝 Spaghetti Bolognese</h3>
+      <button onclick="toggleDetail(this)">Lihat Resep</button>
+      <div class="detail">
+        <h4>Bahan:</h4>
+        <ul>
+          <li>200 gram spaghetti</li>
+          <li>100 gram daging sapi cincang</li>
+          <li>1 siung bawang putih, cincang halus</li>
+          <li>1/2 bawang bombay, cincang</li>
+          <li>3 sdm saus tomat</li>
+          <li>1 buah wortel ukuran kecil, potong dadu kecil (opsional)</li>
+          <li>1 batang seledri, potong dadu kecil (opsional)</li>
+          <li>1 sdt oregano kering</li>
+          <li>1/2 sdt basil kering</li>
+          <li>Garam dan merica secukupnya</li>
+          <li>Gula secukupnya</li>
+          <li>Keju Parmesan parut (opsional)</li>
+        
+        </ul>
+        <h4>Langkah:</h4>
+        <ol>
+          <li>Rebus spaghetti dalam air mendidih yang sudah diberi garam hingga al dente.</li>
+          <li>Tiriskan, sisakan sedikit air rebusan pasta.</li>
+          <li>Tumis bawang bombay dan bawang putih hingga harum.</li>
+          <li>Masukkan daging cincang, masak hingga berubah warna.</li>
+          <li>Jika menggunakan wortel dan seledri, masukkan saat menumis bawang.</li>
+          <li>Tambahkan saus tomat, oregano, basil, garam, merica, dan gula. Aduk rata.</li>
+          <li>Masak dengan api kecil selama minimal 30 menit, atau hingga saus mengental.</li>
+          <li>Tambahkan sedikit air rebusan pasta jika saus terlalu kental.</li>
+          <li>Masukkan spaghetti ke dalam saus bolognese, aduk rata.</li>
+          <li>Sajikan hangat dengan taburan keju Parmesan parut (jika suka).</li>
+
+        </ol>
+      </div>
+    </div>
+
+    <!-- AYAM GORENG CRISPY -->
+    <div class="resep">
+      <img src="https://img.okezone.com/content/2016/03/13/298/1334743/ayam-goreng-krispy-original-yang-crunchy-aKEvV4wiod.jpg" alt="Ayam Goreng Crispy">
+      <h3>🍗 Ayam Goreng Crispy</h3>
+      <button onclick="toggleDetail(this)">Lihat Resep</button>
+      <div class="detail">
+        <h4>Bahan:</h4>
+        <ul>
+            <li>1 kg ayam, potong sesuai selera</li>
+            <li>500 gr tepung terigu serbaguna</li>
+            <li>100 gr tepung maizena</li>
+            <li>1 sdt baking powder</li>
+            <li>1 sdt garam</li>
+            <li>1 sdt merica bubuk</li>
+            <li>1 sdt bubuk bawang putih</li>
+            <li>1/2 sdt bubuk cabai (opsional)</li>
+            <li>2 butir telur, kocok lepas</li>
+            <li>Minyak goreng secukupnya</li>    
+        </ul>
+        <h4>Langkah:</h4>
+        <ol>
+            <li>Marinasi ayam dengan garam, merica, bubuk bawang putih, dan bubuk cabai.</li>
+            <li>Diamkan 30 menit.</li>
+            <li>Campurkan tepung terigu, maizena, baking powder, garam, merica, dan bubuk bawang putih dalam wadah.</li>
+            <li>Celupkan ayam ke telur, lalu gulingkan ke campuran tepung.</li>
+            <li>Ulangi agar lebih crispy sambil dicubit-cubit agar tepung menempel keriting.</li>
+            <li>Goreng dalam minyak panas hingga kuning keemasan dan matang.</li>
+            <li>Angkat dan tiriskan.</li>
+            <li>Sajikan hangat.</li>        
+        </ol>
+      </div>
+    </div>
+
+    <!-- NASI GORENG -->
+    <div class="resep">
+      <img src="https://www.masakapahariini.com/wp-content/uploads/2021/07/Nasi-Goreng-Spesial-Ayam-Kecombrang.jpg" alt="Nasi Goreng Spesial">
+      <h3>🍚 Nasi Goreng Spesial</h3>
+      <button onclick="toggleDetail(this)">Lihat Resep</button>
+      <div class="detail">
+        <h4>Bahan:</h4>
+        <ul>
+            <li>2 piring nasi putih dingin</li>
+            <li>2 butir telur</li>
+            <li>2 siung bawang putih, cincang</li>
+            <li>2 sdm kecap manis</li>
+            <li>1 sdm saus tiram</li>
+            <li>1 batang daun bawang, iris</li>
+            <li>Garam dan merica secukupnya</li>
+            <li>Ayam suwir, sosis, atau udang (opsional)</li>        
+        </ul>
+        <h4>Langkah:</h4>
+        <ol>
+            <li>Panaskan sedikit minyak, orak-arik telur lalu sisihkan di pinggir wajan.</li>
+            <li>Tumis bawang putih hingga harum, lalu masukkan ayam atau bahan tambahan lain.</li>
+            <li>Masukkan nasi, aduk rata bersama telur.</li>
+            <li>Tambahkan kecap, saus tiram, garam, dan merica.</li>
+            <li>Aduk rata dan masak hingga nasi panas dan wangi.</li>
+            <li>Taburi daun bawang sebelum disajikan.</li>        
+        </ol>
+      </div>
+    </div>
+
+    <!-- TUMIS KANGKUNG -->
+    <div class="resep">
+      <img src="https://cdn.idntimes.com/content-images/community/2021/01/fromandroid-c83fe832bc61e13941dfd5bfb449ddd5_600x400.jpg" alt="Tumis Kangkung">
+      <h3>🥬 Tumis Kangkung</h3>
+      <button onclick="toggleDetail(this)">Lihat Resep</button>
+      <div class="detail">
+        <h4>Bahan:</h4>
+        <ul>
+            <li>1 ikat kangkung, petik daunnya</li>
+            <li>3 siung bawang putih, iris</li>
+            <li>2 siung bawang merah, iris</li>
+            <li>2 buah cabai merah, iris serong</li>
+            <li>1 sdm saus tiram</li>
+            <li>Garam dan gula secukupnya</li>
+            <li>Minyak untuk menumis</li>
+        </ul>
+        <h4>Langkah:</h4>
+        <ol>
+            <li>Panaskan minyak, tumis bawang putih, bawang merah, dan cabai hingga harum.</li>
+            <li>Masukkan kangkung, aduk cepat.</li>
+            <li>Tambahkan saus tiram, garam, dan gula. Aduk rata.</li>
+            <li>Masak sebentar saja agar kangkung tetap segar dan hijau.</li>
+            <li>Angkat dan sajikan hangat.</li>        
+        </ol>
+      </div>
+    </div>
+
+    <!-- PERKEDEL -->
+    <div class="resep">
+      <img src="https://images.tokopedia.net/img/KRMmCm/2024/2/19/b0be084c-e37b-4f7f-8bf4-e91350bd4ff3.jpg" alt="Perkedel Kentang">
+      <h3>🥔 Perkedel Kentang</h3>
+      <button onclick="toggleDetail(this)">Lihat Resep</button>
+      <div class="detail">
+        <h4>Bahan:</h4>
+        <ul>
+            <li>500 gram kentang, kukus dan haluskan</li>
+            <li>100 gram daging cincang (opsional)</li>
+            <li>1 butir telur</li>
+            <li>2 siung bawang putih, haluskan</li>
+            <li>1 batang daun bawang, iris halus</li>
+            <li>Garam, merica, dan pala bubuk secukupnya</li>
+            <li>Minyak untuk menggoreng</li>        
+        </ul>
+        <h4>Langkah:</h4>
+        <ol>
+            <li>Campurkan kentang, bawang putih, daun bawang, daging cincang (jika pakai), dan bumbu. Aduk rata.</li>
+            <li>Bentuk bulat pipih sesuai selera.</li>
+            <li>Celupkan ke dalam telur kocok.</li>
+            <li>Goreng dalam minyak panas hingga keemasan.</li>
+            <li>Angkat dan sajikan hangat.</li>        
+        </ol>
+      </div>
+    </div>
+
+<!-- BAKWAN SAYUR RENYAH -->
+    <div class="resep">
+      <img src="https://asset.kompas.com/crops/8KD9pL9GNhmgqACtCQD20B6dnSE=/3x0:700x465/1200x800/data/photo/2021/02/05/601caaf198db2.jpg" alt="Bakwan Sayur Renyah">
+      <h3>🧆Bakwan Sayur Renyah</h3>
+      <button onclick="toggleDetail(this)">Lihat Resep</button>
+      <div class="detail">
+        <h4>Bahan:</h4>
+        <ul>
+            <li>1 buah wortel, serut</li>
+            <li>1 genggam kol, iris tipis</li>
+            <li>2 batang daun bawang, iris
+            <li>100 gram tepung terigu</li>
+            <li>1 sdm tepung beras</li>
+            <li>1 siung bawang putih, haluskan</li>
+            <li>Garam, lada, dan air secukupnya</li>
+        </ul>
+        <h4>Langkah:</h4>
+        <ol>
+            <li>Campur semua bahan dalam wadah.</li>
+            <li>Tambahkan air sedikit demi sedikit hingga adonan pas.</li>
+            <li>Panaskan minyak, goreng adonan satu per satu hingga keemasan.</li>
+            <li>Angkat dan sajikan selagi hangat.</li>        
+        </ol>
+      </div>
+    </div>
+
+  </main>
+
+  <footer style="background-color: tomato; color: white; text-align: center; padding: 20px; font-size: 14px;">
+    <p>&copy; 2025 MasakAsik | Dibuat dengan ❤️ oleh Tessa</p>
+    <p>Jl. Eddy Gagola, Manado, Sulawesi Utara</p>
+    <p>Email: support@masakasik.com | Telp: 0852-4038-0822</p>
+  </footer>
+
+  <script>
+    function toggleDetail(btn) {
+      const detail = btn.nextElementSibling;
+      if (detail.style.display === "none" || detail.style.display === "") {
+        detail.style.display = "block";
+        btn.textContent = "Tutup Resep";
+      } else {
+        detail.style.display = "none";
+        btn.textContent = "Lihat Resep";
+      }
+    }
+    function cekLogin() {
+    // Cek login simulasi, langsung arahkan ke halaman login
+    window.location.href = "index.html";
+  }
+  </script>
+</body>
+</html>
